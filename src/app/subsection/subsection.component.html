@@ -1,0 +1,20 @@
+<div class="root">
+  <div *ngIf="isFolder && !isLastFolder" class="subsection">
+    <div type="button" (click)="collapse.toggle()" class="col subsectionTitle">
+      <span class="col">{{ subsection?.NAME }}</span>
+      <i-bs [name]="isCollapsed ? 'chevron-down' : 'chevron-up'"></i-bs>
+    </div>
+    <div #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsed" class="subsectionCollapse">
+      <eco-subsection *ngFor="let subsection of subsection?.CHILDREN" [subsection]="subsection"></eco-subsection>
+    </div>
+  </div>
+  <div *ngIf="isFolder && isLastFolder" class="subsection">
+    <div type="button" (click)="collapse.toggle()" class="col subsectionTitle">
+      <span class="col">{{ subsection?.NAME }}</span>
+      <i-bs [name]="isCollapsed ? 'chevron-down' : 'chevron-up'"></i-bs>
+    </div>
+    <div #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsed">
+      <eco-tests [tests]="subsection?.CHILDREN ?? []" (found)="handleFound($event)"></eco-tests>
+    </div>
+  </div>
+</div>

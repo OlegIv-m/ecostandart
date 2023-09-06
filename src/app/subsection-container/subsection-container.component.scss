@@ -1,0 +1,105 @@
+.root {
+  background: #F4F4F4;
+  padding-bottom: var(--space-64);
+}
+
+.btn-light {
+  height: 35px;
+  width: 81px;
+
+  padding: unset;
+
+  border-color: var(--dark-grey-secondary);
+}
+
+.subSectionImage {
+  height: 360px;
+  width: 100%;
+
+  background-image: linear-gradient(0deg, #F4F4F4 0%, rgba(244, 244, 244, 0.00) 82.27%), url(../../assets/img/card1-background.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.subsectionBody {
+  padding: var(--space-24);
+  margin: var(--space-20) var(--space-64) 0;
+
+  background: #FFF;
+
+  &List {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  @media (max-width: 375px) {
+    margin: 0;
+  }
+}
+
+.breadcrumb-item {
+
+  a {
+    color: var(--grey-light);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px;
+    text-decoration: none;
+  }
+
+  &.active {
+    padding-left: var(--space-4);
+
+    a {
+      color: var(--accent);
+    }
+
+    &::before {
+      padding-right: var(--space-4);
+    }
+  }
+}
+
+.subsectionHeader {
+  color: var(--dark-grey-secondary);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.subsectionSearch {
+  border-radius: 4px;
+  border: 1px solid #CFD5E0;
+  background: #FAFAFA;
+
+  * {
+    border: unset;
+    background-color: #FAFAFA;
+  }
+
+  input {
+    padding-left: unset;
+
+    color: var(--dark-grey-hover);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+  }
+}
+
+.backButton {
+  border-radius: 4px;
+  border: 2px solid var(--dark-grey-secondary);
+
+  color: var(--dark-grey-secondary);
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px
+}

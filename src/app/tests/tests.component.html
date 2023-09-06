@@ -1,0 +1,8 @@
+<div>
+  <div>{{ company }}</div>
+  <div class="testsGrid">
+    <div *ngFor="let test of tests" [style]="!showTestItem(test.NAME) ? 'display: none;' : ''">
+      <eco-test-item [test]="test"  ></eco-test-item>
+    </div>
+  </div>
+</div>

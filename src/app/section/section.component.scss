@@ -1,0 +1,32 @@
+.section {
+  height: 300px;
+  width: 420px;
+
+  padding: var(--space-28);
+
+  border: 1px solid var(--light-grey-2);
+
+  * {
+    color: var(--dark-grey-secondary);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+  }
+
+  > div {
+    overflow: hidden;
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  @media (max-width: 375px) {
+    height: 234px;
+    width: 327px;
+
+    padding: var(--space-20);
+
+    * {
+      font-size: 14px;
+    }
+  }
+}

@@ -1,0 +1,44 @@
+
+.root {
+  margin-top: var(--space-12);
+  border-bottom: 1px solid var(--light-grey-1);
+}
+
+.collapsed {
+  margin-left: 12px;
+}
+
+.opened {
+  background-color: green;
+
+  > * {
+    transform: rotate(180deg);
+    transition: transform 2s;
+  }
+}
+
+.subsection {
+
+  &Title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-bottom: var(--space-24);
+
+    margin: 0 var(--space-12);
+  }
+  &Collapse {
+    margin-left: var(--space-12);
+  }
+}
+
+.btn-light {
+  height: 35px;
+  width: 81px;
+
+  padding: unset;
+
+  border-color: var(--dark-grey-secondary);
+}
+

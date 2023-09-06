@@ -1,0 +1,16 @@
+<div class="root">
+  <div class="heading">
+    <div class="title">Тесты для тернировки</div>
+    <div class="input-group subsectionSearch">
+      <span class="input-group-text ">
+        <img src="/assets/svg/search.svg" />
+      </span>
+      <input type="text" class="form-control" placeholder="Поиск по тестам" [(ngModel)]="search" (ngModelChange)="searchTests($event)"/>
+    </div>
+    <h3>Тесты Ростехнадзора</h3>
+  </div>
+  <div  class="sectionContainer">
+    <eco-section *ngFor="let section of sections; index as i" [section]="section" [url]="section.url ?? ''"></eco-section>
+  </div>
+</div>
+

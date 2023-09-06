@@ -1,0 +1,18 @@
+.testCard {
+  height: 140px;
+
+  padding: var(--space-20);
+}
+
+.textOverflow {
+  text-overflow: ellipsis;
+  overflow: hidden;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+
+  line-height: 20px;
+
+  margin: auto 0;
+}

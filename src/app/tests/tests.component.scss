@@ -1,0 +1,33 @@
+.testsGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-16);
+
+  > * {
+    flex: 1 1 408px;
+
+    height: 160px;
+    max-width: 408px;
+    width: 408px;
+
+    @media (max-width: 375px) {
+      flex: 1 1 327px;
+
+      height: 136px;
+      max-width: 327px;
+      width: 327px;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (max-width: 720px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.testItem {
+  padding: var(--space-24) 0;
+}
